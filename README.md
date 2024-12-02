@@ -2,9 +2,9 @@
 - 👀 I’m interested in data analysis
 - 🌱 I’m currently learning python pandas, sql, excel and power bi
 - 💞️ I’m looking to collaborate on any projects with anyone 
-- 📫 How to reach me lekalakala77@gmail.com
+- 📫 How to reach me mlekalakala@webmail.co.za 
 - 😄 Pronouns: Mr.
-- ⚡ Fun fact: I also make Soulful & Deep House music, MikaySA😎
+- ⚡ Fun fact: I also make Soulful & Deep House music, stage name is MikaySA😎
 
 <!---
 MJWorx/MJWorx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
