@@ -1,6 +1,6 @@
 - 👋 Hi, I’m MJ Lekalakala
-- 👀 I’m interested in data analysis
-- 🌱 I’m currently learning python pandas, sql, excel and power bi
+- 👀 I’m interested in data analysis, possibly machine learning in the future
+- 🌱 I’m currently learning python, pandas, sql, excel and power bi
 - 💞️ I’m looking to collaborate on any projects with anyone 
 - 📫 How to reach me mlekalakala@webmail.co.za 
 - 😄 Pronouns: Mr.
