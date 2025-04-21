@@ -2,7 +2,7 @@
 - 👀 I’m interested in data analysis, possibly data science, machine learning in the future
 - 🌱 I’m currently learning python, sql, excel, sas, tableau and power bi
 - 💞️ I’m looking to collaborate on any projects with anyone 
-- 📫 How to reach me mlekalakala@webmail.co.za 
+- 📫 How to reach me mjworxanalyst@gmail.com
 - 😄 Pronouns: Mr.
 - ⚡ Fun fact: I also make Soulful & Deep House music, stage name is MikaySA😎
 
