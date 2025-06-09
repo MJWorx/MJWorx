@@ -1,6 +1,6 @@
 - 👋 Hi, I’m MJ Lekalakala
-- 👀 I’m interested in data analysis, data science & machine learning
-- 🌱 I’m currently learning python, sql, excel, sas, power bi, tableau & HTML/CSS
+- 👀 I’m interested in data analysis, data science & data engineering
+- 🌱 I’m currently learning python, sql, excel, power bi, tableau & HTML/CSS
 - 💞️ I’m looking to collaborate on any projects with anyone 
 - 📫 How to reach me mjworxanalyst@gmail.com
 - 😄 Pronouns: Mr.
