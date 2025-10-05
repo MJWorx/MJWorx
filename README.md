@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on any projects with anyone 
 - 📫 How to reach me mjworxanalyst@gmail.com
 - 😄 Pronouns: Mr.
-- ⚡ Fun fact: I also make Soulful, Lounge, Chillout, Jazzy, NuJazz & Deep House music, stage name is MikaySA😎
+- ⚡ Fun fact: I also make Soulful, Lounge, Chillout, Jazzy, NuJazz & Deep House music, stage name is MikaySA
 
 <!---
 MJWorx/MJWorx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
