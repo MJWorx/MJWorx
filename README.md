@@ -1,5 +1,5 @@
 - 👋 Hi, I’m MJ Lekalakala
-- 👀 I’m interested in data analysis & data science
+- 👀 I’m interested in data analysis, data science & machine learning
 - 🌱 I’m currently learning python, sql, excel, power bi/tableau & machine learning
 - 💞️ I’m looking to collaborate on any projects with anyone 
 - 📫 How to reach me mjworxanalyst@gmail.com
