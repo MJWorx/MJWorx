@@ -326,3 +326,231 @@ VALUES
 (308,'2021-02-28','banner_partner','media',39889,8490000,6822.62,849,18,2,7030.0);
 
 SELECT * FROM digital_marketing_analysis;
+
+-- SQL Queries
+
+-- Total Revenue
+
+SELECT SUM(DISTINCT(total_revenue)) AS Total_Revenue
+FROM digital_marketing_analysis;
+
+-- Total Orders
+
+SELECT SUM(DISTINCT(total_orders)) AS Total_Orders
+FROM digital_marketing_analysis;
+
+-- Total Campaign Impressions
+
+SELECT SUM(DISTINCT(campaign_impressions)) AS Total_Campaign_Impressions
+FROM digital_marketing_analysis;
+
+-- Total Marketing Spent
+
+SELECT SUM(DISTINCT(marketing_spent)) AS Total_Marketing_Spent
+FROM digital_marketing_analysis;
+
+-- Total Campaign Clicks
+
+SELECT SUM(DISTINCT(campaign_clicks)) AS Total_Campaign_Clicks
+FROM digital_marketing_analysis;
+
+-- Total Campaign Leads
+
+SELECT SUM(DISTINCT(campaign_leads)) AS Total_Campaign_Leads
+FROM digital_marketing_analysis;
+
+-- % of Revenue by Campaign Name
+
+SELECT campaign_name, 
+	CAST(SUM(total_revenue) AS DECIMAL(10,2)) AS Total_Revenue,
+		CAST(SUM(total_revenue) * 100 / (SELECT SUM(total_revenue) FROM digital_marketing_analysis) AS DECIMAL(10,2)) AS Total_Volume_Percentage
+FROM digital_marketing_analysis
+GROUP BY campaign_name;
+
+-- Total Order Revenue
+
+SELECT Top 5 total_orders * total_revenue AS Total_Order_Revenue
+FROM digital_marketing_analysis;
+
+-- Total Campaign Clicks Revenue
+
+SELECT Top 5 campaign_clicks * total_revenue AS Total_Campaign_Clicks_Revenue
+FROM digital_marketing_analysis;
+
+-- Total Campaign Leads Revenue
+
+SELECT Top 5 campaign_leads * total_revenue AS Total_Campaign_Leads_Revenue
+FROM digital_marketing_analysis;
+
+---CAMPAIGN NAME
+
+-- Top 5 Campaign Names by Total Order Revenue
+
+SELECT Top 5 campaign_name, 
+SUM(DISTINCT(total_orders * total_revenue)) AS Total_Order_Revenue
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Total_Order_Revenue DESC;
+
+-- Bottom 5 Campaign Names by Bottom Order Revenue
+
+SELECT Top 5 campaign_name, 
+SUM(DISTINCT(total_orders * total_revenue)) AS Bottom_Order_Revenue
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Bottom_Order_Revenue;
+
+-- Top 5 Campaign Names by Total Campaign Clicks Revenue
+
+SELECT Top 5 campaign_name, 
+SUM(DISTINCT(campaign_clicks * total_revenue)) AS Total_Campaign_Clicks_Revenue
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Total_Campaign_Clicks_Revenue DESC;
+
+-- Bottom 5 Campaign Names by Bottom Campaign Clicks Revenue
+
+SELECT Top 5 campaign_name, 
+SUM(DISTINCT(campaign_clicks * total_revenue)) AS Bottom_Campaign_Clicks_Revenue
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Bottom_Campaign_Clicks_Revenue;
+
+-- Top 5 Campaign Names by Total Campaign Leads Revenue
+
+SELECT Top 5 campaign_name, 
+SUM(DISTINCT(campaign_leads * total_revenue)) AS Total_Campaign_Leads_Revenue
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Total_Campaign_Leads_Revenue DESC;
+
+-- Bottom 5 Campaign Names by Bottom Campaign Leads Revenue
+
+SELECT Top 5 campaign_name, 
+SUM(DISTINCT(campaign_leads * total_revenue)) AS Bottom_Campaign_Leads_Revenue
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Bottom_Campaign_Leads_Revenue;
+
+---PLATFORM CATEGORY
+
+-- Top 5 Platform Category by Total Order Revenue
+
+SELECT Top 5 platform_category, 
+SUM(DISTINCT(total_orders * total_revenue)) AS Total_Order_Revenue
+FROM digital_marketing_analysis
+GROUP BY platform_category
+ORDER BY Total_Order_Revenue DESC;
+
+-- Bottom 5 Platform Category by Bottom Order Revenue
+
+SELECT Top 5 platform_category, 
+SUM(DISTINCT(total_orders * total_revenue)) AS Bottom_Order_Revenue
+FROM digital_marketing_analysis
+GROUP BY platform_category
+ORDER BY Bottom_Order_Revenue;
+
+-- Top 5 Platform Category by Total Campaign Clicks Revenue
+
+SELECT Top 5 platform_category, 
+SUM(DISTINCT(campaign_clicks * total_revenue)) AS Total_Campaign_Clicks_Revenue
+FROM digital_marketing_analysis
+GROUP BY platform_category
+ORDER BY Total_Campaign_Clicks_Revenue DESC;
+
+-- Bottom 5 Platform Category by Bottom Campaign Clicks Revenue
+
+SELECT Top 5 platform_category, 
+SUM(DISTINCT(campaign_clicks * total_revenue)) AS Bottom_Campaign_Clicks_Revenue
+FROM digital_marketing_analysis
+GROUP BY platform_category
+ORDER BY Bottom_Campaign_Clicks_Revenue;
+
+-- Top 5 Platform Category by Total Campaign Leads Revenue
+
+SELECT Top 5 platform_category, 
+SUM(DISTINCT(campaign_leads * total_revenue)) AS Total_Campaign_Leads_Revenue
+FROM digital_marketing_analysis
+GROUP BY platform_category
+ORDER BY Total_Campaign_Leads_Revenue DESC;
+
+-- Bottom 5 Platform Category by Bottom Campaign Leads Revenue
+
+SELECT Top 5 platform_category, 
+SUM(DISTINCT(campaign_leads * total_revenue)) AS Bottom_Campaign_Leads_Revenue
+FROM digital_marketing_analysis
+GROUP BY platform_category
+ORDER BY Bottom_Campaign_Leads_Revenue;
+
+-- Max Value of Orders by Revenue
+
+SELECT MAX(total_orders * total_revenue) AS Total_Max_Orders_Revenue
+FROM digital_marketing_analysis;
+
+-- Min Value of Orders by Revenue
+
+SELECT MIN(total_orders * total_revenue) AS Total_Min_Orders_Revenue
+FROM digital_marketing_analysis;
+
+-- Max Value of Campaign Clicks by Revenue
+
+SELECT MAX(campaign_clicks * total_revenue) AS Total_Max_Clicks_Revenue
+FROM digital_marketing_analysis;
+
+-- Min Value of Campaign Clicks by Revenue
+
+SELECT MIN(campaign_clicks * total_revenue) AS Total_Min_Clicks_Revenue
+FROM digital_marketing_analysis;
+
+---AVERAGES
+
+-- Top 5 Average Orders Revenue by Campaign Name
+
+SELECT Top 5 campaign_name,
+AVG(total_orders * total_revenue) AS Average_Orders_Revenue_By_Campaign
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Average_Orders_Revenue_By_Campaign DESC;
+
+-- Bottom 5 Average Orders Revenue by Campaign Name
+
+SELECT Top 5 campaign_name,
+AVG(total_orders * total_revenue) AS Bottom_Average_Orders_Revenue_By_Campaign
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Bottom_Average_Orders_Revenue_By_Campaign;
+
+-- Top 5 Average Clicks Revenue by Campaign Name
+
+SELECT Top 5 campaign_name,
+AVG(campaign_clicks * total_revenue) AS Average_Clicks_Revenue_By_Campaign
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Average_Clicks_Revenue_By_Campaign DESC;
+
+-- Bottom 5 Average Clicks Revenue by Campaign Name
+
+SELECT Top 5 campaign_name,
+AVG(campaign_clicks * total_revenue) AS Bottom_Average_Clicks_Revenue_By_Campaign
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Bottom_Average_Clicks_Revenue_By_Campaign;
+
+-- Top 5 Average Leads Revenue by Campaign Name
+
+SELECT Top 5 campaign_name,
+AVG(campaign_leads * total_revenue) AS Average_Leads_Revenue_By_Campaign
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Average_Leads_Revenue_By_Campaign DESC;
+
+-- Bottom 5 Average Clicks Revenue by Campaign Name
+
+SELECT Top 5 campaign_name,
+AVG(campaign_leads * total_revenue) AS Bottom_Average_Leads_Revenue_By_Campaign
+FROM digital_marketing_analysis
+GROUP BY campaign_name
+ORDER BY Bottom_Average_Leads_Revenue_By_Campaign;
+
+
+SELECT * FROM digital_marketing_analysis;
